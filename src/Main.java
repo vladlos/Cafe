@@ -15,6 +15,9 @@ public class Main {
             clients.add(new Client(""+i,cassier));
         }
 
+        for(Client curr:clients){
+            curr.start();
+        }
 
     }
 }
