@@ -24,7 +24,7 @@ public class Cassier{
          return meals.remove(0);
         }
      else {
-         System.out.println("ERROR! Casier has no food");
+         //System.out.println("ERROR! Casier has no food");
          return null;
      }
     }
