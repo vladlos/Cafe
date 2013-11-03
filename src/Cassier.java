@@ -6,15 +6,11 @@ import java.util.List;
  * Date: 03.11.13
  * Time: 14:19
  */
-public class Cassier implements Runnable {
+public class Cassier{
     List<Meal> meals = new LinkedList<Meal>();
-    @Override
-    public void run() {
-    }
-
     public Cassier() {
         for (int i=0;i<10;i++){
-            meals.add(new Meal());
+            meals.add(new Meal(""+i));
         }
     }
 
