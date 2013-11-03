@@ -14,7 +14,7 @@ public class Cassier{
         }
     }
 
-    public Meal giveMeal(){
+    public synchronized Meal giveMeal(){
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
