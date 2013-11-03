@@ -17,7 +17,11 @@ public class Client extends Thread{
     public void run() {
         for (int i=0;i<10;i++){
             meal = cassier.giveMeal();
-            System.out.println("client #"+clientId+" buy meal #"+meal.getId());
+            if (meal!=null){
+                System.out.println("client #"+clientId+" buy meal #"+meal.getId());
+            }else{
+                System.out.println("client#"+clientId+" left hungry! =(");
+            }
         }
     }
 }
