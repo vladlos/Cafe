@@ -1,13 +1,29 @@
+import java.util.LinkedList;
+import java.util.List;
+
 /**
- * Created with IntelliJ IDEA.
  * User: Vlad
  * Date: 03.11.13
  * Time: 14:19
- * To change this template use File | Settings | File Templates.
  */
 public class Cassier implements Runnable {
+    List<Meal> meals = new LinkedList<Meal>();
     @Override
     public void run() {
-        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    public Cassier() {
+        for (int i=0;i<10;i++){
+            meals.add(new Meal());
+        }
+    }
+
+    public Meal giveMeal(){
+     if (meals.size()>0){
+         return meals.remove(0);
+        } else {
+         System.out.println("ERROR! Casier has no food");
+         return null;
+     }
     }
 }
