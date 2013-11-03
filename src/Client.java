@@ -15,7 +15,7 @@ public class Client extends Thread{
 
     @Override
     public void run() {
-        for (int i=0;i<0;i++){
+        for (int i=0;i<10;i++){
             meal = cassier.giveMeal();
             System.out.println("client #"+clientId+" buy meal #"+meal.getId());
         }
