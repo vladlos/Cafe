@@ -24,4 +24,21 @@ public class Client extends Thread{
             }
         }
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Client client = (Client) o;
+
+        if (!clientId.equals(client.clientId)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return clientId.hashCode();
+    }
 }
