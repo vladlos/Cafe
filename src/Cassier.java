@@ -10,14 +10,15 @@ public class Cassier{
     List<Meal> meals = new LinkedList<Meal>();
     public Cassier() {
         for (int i=0;i<10;i++){
-            meals.add(new Meal(""+i));
+            meals.add(new Meal("Meal#"+i));
         }
     }
 
     public Meal giveMeal(){
      if (meals.size()>0){
          return meals.remove(0);
-        } else {
+        }
+     else {
          System.out.println("ERROR! Casier has no food");
          return null;
      }
