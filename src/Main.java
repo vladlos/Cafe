@@ -1,9 +1,20 @@
+import java.util.LinkedList;
+import java.util.List;
+
 /**
- * Created with IntelliJ IDEA.
  * User: Vlad
  * Date: 03.11.13
  * Time: 14:19
- * To change this template use File | Settings | File Templates.
  */
 public class Main {
+    public static void main(String[] args) {
+        Cassier cassier = new Cassier();
+        List<Client> clients = new LinkedList<Client>();
+        int n = 10;
+        for (int i = 0; i<n; i++){
+            clients.add(new Client(""+i,cassier));
+        }
+
+
+    }
 }
